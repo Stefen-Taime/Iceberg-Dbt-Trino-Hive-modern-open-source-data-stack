@@ -1,4 +1,4 @@
-# Iceberg + Dbt + Trino + Hive : pile de données moderne et open source
+# Iceberg + Dbt + Trino + Hive : modern, open-source data stack
 
 The repository contains demo assets of Iceberg + Dbt + Trino + Hive : pile de données moderne et open source
 
