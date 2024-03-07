@@ -1,6 +1,6 @@
-# dbt-trino Starburst blog demo
+# Iceberg + Dbt + Trino + Hive : pile de données moderne et open source
 
-The repository contains demo assets of dbt + Trino
+The repository contains demo assets of Iceberg + Dbt + Trino + Hive : pile de données moderne et open source
 
 ## Run the local Trino server
 
