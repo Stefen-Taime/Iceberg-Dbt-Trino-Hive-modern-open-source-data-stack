@@ -1,0 +1,37 @@
+
+name: 'my_dbt_trino_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'my_dbt_trino_project'
+
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+
+target-path: "target"  
+clean-targets:         
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+
+require-dbt-version: [">=1.0.0", "<2.0.0"]
+
+
+models:
+  my_dbt_trino_project:
+    +materialized: table
+    source:
+      schema: source
+    stage:
+      +materialized: table
+      schema: stage   
+   
+
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['trino_utils', 'dbt_utils']

@@ -1,0 +1,16 @@
+{
+    "name": "mongodb-sink-connector-listen_events",
+    "config": {
+      "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+      "tasks.max": "1",
+      "topics": "listen_events",
+      "connection.uri": "mongodb://debezium:dbz@mongo:27017/demo?authSource=admin",
+      "database": "demo",
+      "collection": "listen_events",
+      "publish.full.document.only": "true",
+      "output.format.value" : "schema",
+      "value.converter.schemas.enable": "true",
+      "value.converter " :  "org.apache.kafka.connect.json.JsonConverter ",
+      "key.converter ":  "org.apache.kafka.connect.storage.StringConverter "
+    }
+  }

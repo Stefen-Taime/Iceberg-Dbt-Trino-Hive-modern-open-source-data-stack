@@ -1,0 +1,16 @@
+# source.yml
+version: 2
+
+sources:
+  - name: oltp
+    database: oltp  
+    schema: public
+    tables:
+      - name: auth_events
+
+  - name: website
+    database: website
+    schema: demo
+    tables:
+      - name: listen_events
+      - name: page_view_events

@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: src_auth_events
+    description: "This model transforms auth_events data from the OLTP source for analytical purposes."
+    columns:
+      - name: ts
+        description: "Timestamp of the event."
+        tests:
+          - not_null
+      - name: sessionId
+        tests:
+          - unique
+          - not_null
+      - name: level
+        tests:
+          - accepted_values:
+              values: ['free', 'paid']
+      - name: itemInSession
+      - name: city
+
+      - name: zip
+      - name: state
+      - name: userAgent
+      - name: lon
+      - name: lat
+      - name: userId
+        tests:
+          - unique
+      - name: lastName    
+      - name: firstName
+      - name: gender
+        tests:
+          - accepted_values:
+              values: ['F', 'M']
+      - name: registration
+      - name: success
+        tests:
+          - accepted_values:
+              values: ['True', 'False']

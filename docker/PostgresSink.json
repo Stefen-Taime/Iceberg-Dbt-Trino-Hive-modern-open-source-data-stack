@@ -1,0 +1,12 @@
+{
+  "name": "jdbc-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "topics": "auth_events",
+    "connection.url": "jdbc:postgresql://oltp:5432/postgres",
+    "connection.user": "postgres",
+    "connection.password": "postgres",
+    "auto.create": "true"
+  }
+}

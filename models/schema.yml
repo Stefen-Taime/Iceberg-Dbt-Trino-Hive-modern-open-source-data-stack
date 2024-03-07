@@ -1,0 +1,78 @@
+version: 2
+
+models:
+  - name: auth_events
+    description: "This table records authentication events, including both successful and unsuccessful login attempts."
+
+    columns:
+      - name: ts
+        description: "Timestamp of the event."
+
+      - name: sessionId
+        description: "Unique identifier for the user session."
+        tests:
+          - unique
+
+      - name: level
+        description: "Subscription level of the user at the time of the event."
+        tests:
+          - accepted_values:
+              values: ['free', 'paid']
+
+      - name: itemInSession
+        description: "The sequential number of the event in the current session."
+        tests:
+          - not_null
+
+      - name: city
+        description: "City from which the event was generated."
+      
+
+      - name: zip
+        description: "Zip/postal code from which the event was generated."
+      
+
+      - name: state
+        description: "State or region from which the event was generated."
+        
+
+      - name: userAgent
+        description: "User agent of the browser used for the event."
+       
+
+      - name: lon
+        description: "Longitude from which the event was generated."
+        
+
+      - name: lat
+        description: "Latitude from which the event was generated."
+        
+
+      - name: userId
+        description: "Unique identifier for the user."
+        
+
+      - name: lastName
+        description: "Last name of the user. PII."
+        
+
+      - name: firstName
+        description: "First name of the user. PII."
+   
+
+      - name: gender
+        description: "Gender of the user."
+        tests:
+          - accepted_values:
+              values: ['M', 'F']
+
+      - name: registration
+        description: "Timestamp of the user's registration."
+       
+
+      - name: success
+        description: "Indicates whether the authentication was successful."
+        tests:
+         
+          - accepted_values:
+              values: ['True', 'False']
