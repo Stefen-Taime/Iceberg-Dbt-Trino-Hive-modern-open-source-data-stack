@@ -1,6 +1,9 @@
 
 # Iceberg + Dbt + Trino + Hive: Modern, Open-Source Data Stack
 
+![](https://cdn-images-1.medium.com/max/3086/1*Hg-ZHsBd_yJ54legC570oA.png)
+
+
 The repository showcases a demo of integrating Iceberg, Dbt, Trino, and Hive, forming a modern and open-source data stack suitable for various analytical needs. This guide provides a structured approach to setting up and utilizing this stack effectively, ensuring a seamless workflow from data ingestion to analysis.
 
 ## Run the Local Trino Server
