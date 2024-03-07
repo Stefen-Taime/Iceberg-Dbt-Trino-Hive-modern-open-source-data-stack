@@ -104,8 +104,6 @@ To get started with Apache Superset, follow these steps to pull and run the Supe
           docker exec -it superset superset init
    ```
    
-   This step may take some time. Meanwhile, you can join the [official Slack channel](https://join.slack.com/t/apache-superset/shared_invite/zt-l5f5e0av-fyYu8tlfdqbMdz_sPLwUqQ) for support and discussions.
-
 6. **Start Using Superset**:
    After configuration, access Superset at `http://localhost:8080` with the default credentials:
    - Username: `admin`
