@@ -79,7 +79,7 @@ To get started with Apache Superset, follow these steps to pull and run the Supe
 3. **Start Superset**:
    Note that Superset requires a user-specified value of `SECRET_KEY` or `SUPERSET_SECRET_KEY` as an environment variable to start.
    ```
-   docker run -d -p 8080:8088 \
+   docker run -d -p 3000:8088 \
               -e "SUPERSET_SECRET_KEY=$(openssl rand -base64 42)" \
               -e "TALISMAN_ENABLED=False" \
               --name superset apache/superset:$SUPERSET_VERSION
