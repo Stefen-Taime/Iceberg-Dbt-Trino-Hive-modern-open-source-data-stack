@@ -1,0 +1,12 @@
+my_dbt_trino_project:
+  target: dev
+  outputs:
+    dev:
+      type: trino
+      method: none
+      user: admin
+      database: datalake
+      host: localhost
+      port: 8080
+      schema: analytics
+      threads: 1
